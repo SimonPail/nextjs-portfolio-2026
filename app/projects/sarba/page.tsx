@@ -50,17 +50,6 @@ export default function SarbaPage() {
           finalized documents — all in a seamless, digital workflow.
         </p>
 
-        {/* Mockup 1 */}
-        <div className="mb-16">
-          <Image
-            src="/sarba-mockup-1.png"
-            alt="Sarba application mockup showing expense management interface"
-            width={1920}
-            height={1080}
-            className="w-full rounded-xl"
-          />
-        </div>
-
         {/* Features grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
           <div>
@@ -101,14 +90,21 @@ export default function SarbaPage() {
           </div>
         </div>
 
-        {/* Mockup 2 */}
-        <div>
+        {/* Mockups gallery */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <Image
+            src="/sarba-mockup-1.png"
+            alt="Sarba application mockup showing expense management interface"
+            width={1920}
+            height={1080}
+            className="w-full rounded-xl"
+          />
           <Image
             src="/sarba-mockup-2.png"
             alt="Sarba application mockup showing report management"
-            width={1080}
+            width={400}
             height={1080}
-            className="w-full rounded-xl"
+            className="rounded-xl"
           />
         </div>
       </div>

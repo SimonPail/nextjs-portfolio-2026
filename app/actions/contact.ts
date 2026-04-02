@@ -8,6 +8,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export type ContactState = {
   success: boolean;
   errors?: Record<string, string>;
+  values?: Record<string, string>;
 } | null;
 
 export async function sendContactEmail(
@@ -23,6 +24,13 @@ export async function sendContactEmail(
 
   const result = contactSchema.safeParse(raw);
 
+  const values: Record<string, string> = {
+    name: String(raw.name ?? ""),
+    email: String(raw.email ?? ""),
+    subject: String(raw.subject ?? ""),
+    message: String(raw.message ?? ""),
+  };
+
   if (!result.success) {
     const errors: Record<string, string> = {};
     for (const issue of result.error.issues) {
@@ -31,7 +39,7 @@ export async function sendContactEmail(
         errors[field] = issue.message;
       }
     }
-    return { success: false, errors };
+    return { success: false, errors, values };
   }
 
   const { name, email, subject, message } = result.data;
@@ -52,7 +60,8 @@ export async function sendContactEmail(
   });
 
   if (error) {
-    return { success: false, errors: { form: "Failed to send message. Please try again." } };
+    console.error("Resend error:", error);
+    return { success: false, errors: { form: "Failed to send message. Please try again." }, values };
   }
 
   return { success: true };

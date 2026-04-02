@@ -34,7 +34,7 @@ Shared Zod schema used by both server action and client form:
 - Receives `FormData`, parses with Zod schema
 - On validation failure: returns `{ success: false, errors: { fieldName: "message" } }`
 - On success: sends email via Resend SDK to `simon.paillassa@gmail.com`
-- Sender: `onboarding@resend.dev` (Resend default, replaceable with custom domain later)
+- Sender: `contact@simbl.dev` (verified custom domain)
 - On email failure: returns `{ success: false, errors: { form: "Failed to send message." } }`
 - On email success: returns `{ success: true }`
 - Email body: clean HTML template with sender name, email (as reply-to), subject, and message

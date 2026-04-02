@@ -9,6 +9,7 @@ interface ProjectCardProps {
   ctaLabel: string;
   href: string;
   isExternal?: boolean;
+  imageBg?: string;
 }
 
 export default function ProjectCard({
@@ -19,16 +20,17 @@ export default function ProjectCard({
   ctaLabel,
   href,
   isExternal,
+  imageBg,
 }: ProjectCardProps) {
   const card = (
     <div className="group bg-surface-container-lowest rounded-xl overflow-hidden flex flex-col transition-transform hover:-translate-y-2 duration-500">
-      <div className="aspect-video overflow-hidden bg-surface-container-high">
+      <div className="aspect-video overflow-hidden" style={imageBg ? { backgroundColor: imageBg } : undefined}>
         <Image
           src={imageUrl}
           alt={imageAlt}
           width={600}
           height={338}
-          className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+          className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-700"
         />
       </div>
       <div className="p-8">

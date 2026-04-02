@@ -1,0 +1,95 @@
+<h2>Projects Section — Design Overview</h2>
+<p class="subtitle">Two parts: updated homepage cards + new Sarba detail page</p>
+
+<div class="section">
+  <h3>Part 1: Homepage Project Cards</h3>
+  <p>Update the existing 3-card grid with real data and links</p>
+
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px;">
+    <!-- Ossau Card -->
+    <div style="background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid #e0e0e0;">
+      <div style="background: #c8d5cd; height: 120px; display: flex; align-items: center; justify-content: center; font-size: 32px;">🐻</div>
+      <div style="padding: 16px;">
+        <h4 style="margin: 0 0 6px;">Ossau App</h4>
+        <p style="font-size: 12px; color: #666; margin: 0 0 12px;">Shared outdoor experience application making mountain activities more accessible in the Pyrenees.</p>
+        <p style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #725c00;">Visit Website →</p>
+      </div>
+    </div>
+
+    <!-- bVision Card -->
+    <div style="background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid #e0e0e0;">
+      <div style="background: #d0d4e0; height: 120px; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #666;">bVision screenshot</div>
+      <div style="padding: 16px;">
+        <h4 style="margin: 0 0 6px;">bVision</h4>
+        <p style="font-size: 12px; color: #666; margin: 0 0 12px;">Interactive tool designed to help uncover personal values and understand how they influence work performance.</p>
+        <p style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #725c00;">Visit Website →</p>
+      </div>
+    </div>
+
+    <!-- Sarba Card -->
+    <div style="background: #fff; border-radius: 12px; overflow: hidden; border: 1px solid #e0e0e0;">
+      <div style="background: #e0d8c8; height: 120px; display: flex; align-items: center; justify-content: center; font-size: 14px; color: #666;">Sarba mockup</div>
+      <div style="padding: 16px;">
+        <h4 style="margin: 0 0 6px;">Sarba</h4>
+        <p style="font-size: 12px; color: #666; margin: 0 0 12px;">Expense Management Application for employees and administration to manage expenses during working days.</p>
+        <p style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #725c00;">View Case Study →</p>
+      </div>
+    </div>
+  </div>
+
+  <p style="font-size: 12px; color: #888; margin-top: 12px;">
+    <strong>Ossau & bVision</strong> → external links (new tab) &nbsp;|&nbsp; <strong>Sarba</strong> → internal link to /projects/sarba
+  </p>
+</div>
+
+<div class="section">
+  <h3>Part 2: /projects/sarba Page</h3>
+  <p>Faithful recreation of old portfolio — hero, description, features, mockups</p>
+
+  <div class="mockup">
+    <div class="mockup-header">/projects/sarba — Page Structure</div>
+    <div class="mockup-body" style="padding: 24px;">
+      <!-- Back link -->
+      <p style="font-size: 12px; color: #725c00; margin-bottom: 24px;">← Back to projects</p>
+
+      <!-- Title -->
+      <h2 style="font-size: 28px; font-weight: 800; margin: 0 0 16px;">Sarba</h2>
+
+      <!-- Description -->
+      <p style="font-size: 14px; color: #555; line-height: 1.6; margin-bottom: 32px; max-width: 600px;">
+        Expense Management Application designed to help employees and administration to manage expenses incurred during working days. Employees can log expenses in multiple currencies, sign monthly reports, and receive notifications for approvals.
+      </p>
+
+      <!-- Mockup 1 -->
+      <div style="background: #f0ece4; height: 180px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #999; margin-bottom: 32px;">
+        sarba-mockup-1.png
+      </div>
+
+      <!-- User Features -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 32px;">
+        <div>
+          <h3 style="font-size: 18px; font-weight: 700; margin: 0 0 12px;">User Features</h3>
+          <ul style="font-size: 13px; color: #555; line-height: 2; padding-left: 16px;">
+            <li>Create expenses, attach receipts, manage transactions</li>
+            <li>Receive notifications for pending signatures</li>
+            <li>Sign monthly reports and review previous ones</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="font-size: 18px; font-weight: 700; margin: 0 0 12px;">Admin Features</h3>
+          <ul style="font-size: 13px; color: #555; line-height: 2; padding-left: 16px;">
+            <li>Generate monthly reports for all employees</li>
+            <li>Request and track signature statuses</li>
+            <li>Download signed reports</li>
+            <li>Multi-currency expense support</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Mockup 2 -->
+      <div style="background: #f0ece4; height: 180px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #999;">
+        sarba-mockup-2.png
+      </div>
+    </div>
+  </div>
+</div>

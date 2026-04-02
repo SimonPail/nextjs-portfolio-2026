@@ -10,6 +10,7 @@ const projects = [
     ctaLabel: "Visit Website",
     href: "https://ossau.app/",
     isExternal: true,
+    imageBg: "#F8F8FE",
   },
   {
     title: "bVision",
@@ -27,8 +28,9 @@ const projects = [
       "Expense Management Application designed to help employees and administration to manage expenses incurred during working days.",
     imageUrl: "/sarba-mockup-1.png",
     imageAlt: "Sarba",
-    ctaLabel: "View Case Study",
+    ctaLabel: "View Project",
     href: "/projects/sarba",
+    imageBg: "#F8F8FE",
   },
 ];
 
@@ -40,9 +42,6 @@ export default function ProjectsSection() {
           <h2 className="text-3xl font-extrabold tracking-tight text-on-surface font-headline">
             Selected Works
           </h2>
-          <p className="text-primary font-medium italic font-body hidden sm:block">
-            Hand-picked engineering highlights
-          </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (

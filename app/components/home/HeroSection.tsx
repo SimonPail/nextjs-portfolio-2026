@@ -1,6 +1,6 @@
 export default function HeroSection() {
   return (
-    <section className="max-w-7xl mx-auto px-8 mb-32">
+    <section className="max-w-7xl mx-auto px-8 mb-24 md:mb-32">
       <div className="lg:w-3/4">
         <p className="font-label text-secondary uppercase tracking-[0.2em] text-xs font-semibold mb-4">
           Available for new opportunities
@@ -16,7 +16,7 @@ export default function HeroSection() {
             |
           </span>
           <span className="text-on-surface-variant italic font-body">
-            7 years experience building high-performance digital products.
+            7 years experience building intuitive applications
           </span>
         </div>
       </div>

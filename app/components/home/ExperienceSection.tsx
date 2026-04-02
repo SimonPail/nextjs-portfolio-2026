@@ -4,33 +4,42 @@ const jobs = [
   {
     title: "Co-founder & Lead Developer",
     company: "Ossau App",
-    period: "2021 — Present",
+    period: "2025 — Present",
     description:
-      "Architected and launched a comprehensive ecosystem for local commerce. Leading technical strategy, managing cross-functional teams, and implementing scalable cloud infrastructure.",
-    tags: ["React Native", "Node.js", "AWS", "TypeScript"],
+      "Co-founded Ossau, a mobile app for the Pyrénées hiking community with 2,000+ active users. Sole developer working alongside a product co-founder and a UX designer. Built the full stack from scratch: NestJS backend on VPS, PostgreSQL via Neon, Expo/React Native frontend. Core features include trail maps, group social features, real-time notifications, and deep linking for iOS & Android.",
+    tags: ["React Native", "Expo", "NestJS", "PostgreSQL", "N8N", "Socket.IO"],
     isCurrent: true,
   },
   {
     title: "Freelance Full-Stack Developer",
-    company: "Self-Employed",
-    period: "2019 — 2021",
+    company: "Independent · Remote",
+    period: "2023 — Present",
     description:
-      "Delivered high-end digital solutions for international clients. Focused on performance optimization, SEO strategy, and custom e-commerce integrations using headless architectures.",
-    tags: ["Next.js", "GraphQL", "PostgreSQL"],
+      "Working independently with European clients on varied projects from internal tooling to enterprise applications. STEF (2024–present): Built a React/Next.js monorepo framework as the technical foundation for all internal web apps, shared component library, RBAC authorization. Boschung (2024): Frontend development on Boschung Web. Extia (2023–2024): React/PWA interfaces, REST APIs, VPS infrastructure, CI/CD with GitHub Actions.",
+    tags: ["React.js", "Next.js", "TypeScript", "NestJS", "Git CI/CD", "VPS"],
+    isCurrent: true,
   },
   {
     title: "Full-Stack Developer",
-    company: "ITAF.TECH",
-    period: "2017 — 2019",
+    company: "ITAF.TECH · Bordeaux, France",
+    period: "2022 — 2023",
     description:
-      "Core developer for enterprise-level ERP systems. Contributed to the migration of legacy monoliths to modern microservices architectures.",
-    tags: ["React", "Express", "MongoDB"],
+      "Full-stack developer on a healthcare ERP serving 70,000+ patients. Feature development and integration across the application, multi-tenant architecture to support multiple international client deployments, i18n implementation, and architectural refactoring with test automation.",
+    tags: ["Vue.js", "JavaScript", "Express.js", "Node.js", "MongoDB", "Git"],
+  },
+  {
+    title: "Full-Stack Developer",
+    company: "Addeo · Bordeaux, France",
+    period: "2019 — 2021",
+    description:
+      "Full-stack developer in an e-learning agency, working on a SaaS career development platform. Rewrote the legacy codebase with clean architecture principles, performance optimization and unit testing. Close collaboration with the design team on feature feasibility.",
+    tags: ["Vue.js", "JavaScript", "CakePHP", "PHP", "MySQL", "Git"],
   },
 ];
 
 export default function ExperienceSection() {
   return (
-    <section className="max-w-7xl mx-auto px-8 py-32" id="experience">
+    <section className="max-w-7xl mx-auto px-8 py-24 md:py-32" id="experience">
       <div className="flex flex-col md:flex-row justify-between items-start mb-16 gap-6">
         <h2 className="text-3xl font-extrabold tracking-tight text-on-surface font-headline">
           Professional Journey

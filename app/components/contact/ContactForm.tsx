@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState, useRef, useEffect } from "react";
+import { useActionState } from "react";
 import { sendContactEmail, type ContactState } from "@/app/actions/contact";
 
 export default function ContactForm() {
@@ -8,14 +8,6 @@ export default function ContactForm() {
     sendContactEmail,
     null
   );
-  const formRef = useRef<HTMLFormElement>(null);
-
-  useEffect(() => {
-    if (state?.success) {
-      formRef.current?.reset();
-    }
-  }, [state]);
-
   return (
     <section className="lg:col-span-7">
       <div className="bg-surface-container-low p-8 md:p-12 rounded-xl">
@@ -29,7 +21,7 @@ export default function ContactForm() {
             {state.errors.form}
           </div>
         )}
-        <form ref={formRef} action={formAction} className="space-y-8">
+        <form action={formAction} className="space-y-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="flex flex-col gap-2">
               <label className="font-label text-[10px] uppercase tracking-[0.2em] font-bold text-outline">
@@ -38,6 +30,8 @@ export default function ContactForm() {
               <input
                 type="text"
                 name="name"
+                key={`name-${state?.success}`}
+                defaultValue={state?.values?.name}
                 placeholder="Your Full Name"
                 className="bg-transparent border-b border-outline-variant focus:border-secondary py-3 transition-colors placeholder:text-neutral-400 outline-none font-body"
               />
@@ -52,6 +46,8 @@ export default function ContactForm() {
               <input
                 type="email"
                 name="email"
+                key={`email-${state?.success}`}
+                defaultValue={state?.values?.email}
                 placeholder="hello@example.com"
                 className="bg-transparent border-b border-outline-variant focus:border-secondary py-3 transition-colors placeholder:text-neutral-400 outline-none font-body"
               />
@@ -67,6 +63,8 @@ export default function ContactForm() {
             <input
               type="text"
               name="subject"
+              key={`subject-${state?.success}`}
+              defaultValue={state?.values?.subject}
               placeholder="Project Inquiry / General Question"
               className="bg-transparent border-b border-outline-variant focus:border-secondary py-3 transition-colors placeholder:text-neutral-400 outline-none font-body"
             />
@@ -80,6 +78,8 @@ export default function ContactForm() {
             </label>
             <textarea
               name="message"
+              key={`message-${state?.success}`}
+              defaultValue={state?.values?.message}
               placeholder="Briefly describe your vision..."
               rows={4}
               className="bg-transparent border-b border-outline-variant focus:border-secondary py-3 transition-colors placeholder:text-neutral-400 outline-none resize-none font-body"
