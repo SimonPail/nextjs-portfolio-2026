@@ -13,7 +13,7 @@ export default async function HeroSection() {
           Simon Paillassa
         </h1>
         <div className="flex flex-col md:flex-row md:items-center gap-4 text-xl md:text-2xl text-primary font-medium">
-          <span className="flex items-center gap-2 font-headline whitespace-nowrap">
+          <span className="flex gap-2 font-headline font-headline  whitespace-nowrap">
             {t("title")}
           </span>
           <span className="hidden md:block text-outline-variant opacity-30">

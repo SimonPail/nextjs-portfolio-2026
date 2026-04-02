@@ -1,8 +1,17 @@
-import { getTranslations } from "next-intl/server";
+import { existsSync } from "fs";
+import { join } from "path";
+import { getLocale, getTranslations } from "next-intl/server";
 import ExperienceItem from "./ExperienceItem";
 
 export default async function ExperienceSection() {
   const t = await getTranslations("Experience");
+  const locale = await getLocale();
+
+  const localizedResume = `/resume/CV_SIMON_${locale.toUpperCase()}_2026.pdf`;
+  const fallbackResume = "/resume/CV_SIMON_EN_2026.pdf";
+  const resumeHref = existsSync(join(process.cwd(), "public", localizedResume))
+    ? localizedResume
+    : fallbackResume;
 
   const jobs = [
     {
@@ -44,7 +53,8 @@ export default async function ExperienceSection() {
           {t("heading")}
         </h2>
         <a
-          href="#"
+          href={resumeHref}
+          download
           className="inline-flex items-center gap-2 px-6 py-3 bg-secondary-container text-on-secondary-container rounded-lg font-bold text-sm uppercase tracking-widest hover:brightness-95 transition-all font-headline"
         >
           <span className="material-symbols-outlined text-lg">download</span>
