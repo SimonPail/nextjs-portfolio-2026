@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 interface ProjectCardProps {
   title: string;
@@ -6,6 +7,8 @@ interface ProjectCardProps {
   imageUrl: string;
   imageAlt: string;
   ctaLabel: string;
+  href: string;
+  isExternal?: boolean;
 }
 
 export default function ProjectCard({
@@ -14,8 +17,10 @@ export default function ProjectCard({
   imageUrl,
   imageAlt,
   ctaLabel,
+  href,
+  isExternal,
 }: ProjectCardProps) {
-  return (
+  const card = (
     <div className="group bg-surface-container-lowest rounded-xl overflow-hidden flex flex-col transition-transform hover:-translate-y-2 duration-500">
       <div className="aspect-video overflow-hidden bg-surface-container-high">
         <Image
@@ -40,4 +45,14 @@ export default function ProjectCard({
       </div>
     </div>
   );
+
+  if (isExternal) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer">
+        {card}
+      </a>
+    );
+  }
+
+  return <Link href={href}>{card}</Link>;
 }
