@@ -1,7 +1,9 @@
 "use server";
 
 import { Resend } from "resend";
-import { contactSchema } from "@/app/lib/schemas/contact";
+import { createContactSchema } from "@/app/lib/schemas/contact";
+import { hasLocale } from "next-intl";
+import { routing } from "@/i18n/routing";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -22,7 +24,20 @@ export async function sendContactEmail(
     message: formData.get("message"),
   };
 
-  const result = contactSchema.safeParse(raw);
+  const localeValue = formData.get("locale") as string;
+  const locale = hasLocale(routing.locales, localeValue)
+    ? localeValue
+    : routing.defaultLocale;
+
+  const messages = (await import(`@/messages/${locale}.json`)).default;
+  const t = messages.ContactForm;
+
+  const contactSchema = createContactSchema({
+    nameMin: t.validationNameMin,
+    emailInvalid: t.validationEmailInvalid,
+    subjectMin: t.validationSubjectMin,
+    messageMin: t.validationMessageMin,
+  });
 
   const values: Record<string, string> = {
     name: String(raw.name ?? ""),
@@ -30,6 +45,8 @@ export async function sendContactEmail(
     subject: String(raw.subject ?? ""),
     message: String(raw.message ?? ""),
   };
+
+  const result = contactSchema.safeParse(raw);
 
   if (!result.success) {
     const errors: Record<string, string> = {};
@@ -61,7 +78,7 @@ export async function sendContactEmail(
 
   if (error) {
     console.error("Resend error:", error);
-    return { success: false, errors: { form: "Failed to send message. Please try again." }, values };
+    return { success: false, errors: { form: t.error }, values };
   }
 
   return { success: true };

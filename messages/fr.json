@@ -1,0 +1,109 @@
+{
+  "Nav": {
+    "projects": "Projets",
+    "about": "À propos",
+    "experience": "Expérience",
+    "contact": "Contact",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu"
+  },
+  "Hero": {
+    "available": "Disponible pour de nouvelles opportunités",
+    "title": "Développeur Full-stack",
+    "subtitle": "7 ans d'expérience dans la création d'applications intuitives"
+  },
+  "About": {
+    "heading": "À propos",
+    "bio": "Développeur full-stack avec 7 ans d'expérience dans la création d'applications web et mobiles. Je travaille principalement avec React, Next.js, NestJS et TypeScript. Je suis à l'aise pour mener un projet de l'architecture au déploiement. En dehors du travail client, j'ai cofondé Ossau, une application mobile pour la communauté de randonnée, construite from scratch et maintenant utilisée par plus de 2 000 personnes."
+  },
+  "Projects": {
+    "heading": "Projets sélectionnés",
+    "ossauTitle": "Ossau App",
+    "ossauDescription": "Application d'expérience outdoor partagée rendant les activités de montagne plus accessibles dans les Pyrénées.",
+    "ossauCta": "Voir le site",
+    "bvisionTitle": "bVision",
+    "bvisionDescription": "Plateforme haute performance de surveillance et de gestion pour l'entretien routier et aéroportuaire, offrant une visualisation des données en temps réel et des analyses pour améliorer l'efficacité opérationnelle.",
+    "bvisionCta": "Voir le site",
+    "sarbaTitle": "Sarba",
+    "sarbaDescription": "Application de gestion des notes de frais conçue pour aider les employés et l'administration à gérer les dépenses engagées pendant les jours de travail.",
+    "sarbaCta": "Voir le projet"
+  },
+  "Experience": {
+    "heading": "Parcours professionnel",
+    "downloadResume": "Télécharger le CV",
+    "ossauTitle": "Co-fondateur & Lead Developer",
+    "ossauCompany": "Ossau App",
+    "ossauPeriod": "2025 — Présent",
+    "ossauDescription": "Cofondateur d'Ossau, une application mobile pour la communauté de randonnée des Pyrénées avec plus de 2 000 utilisateurs actifs. Seul développeur travaillant aux côtés d'un co-fondateur produit et d'un designer UX. Construction complète de la stack : backend NestJS sur VPS, PostgreSQL via Neon, frontend Expo/React Native. Fonctionnalités principales : cartes de sentiers, fonctionnalités sociales de groupe, notifications en temps réel et deep linking pour iOS & Android.",
+    "freelanceTitle": "Développeur Full-Stack Freelance",
+    "freelanceCompany": "Indépendant · Remote",
+    "freelancePeriod": "2023 — Présent",
+    "freelanceDescription": "Travail indépendant avec des clients européens sur des projets variés allant de l'outillage interne aux applications d'entreprise. STEF (2024–présent) : Construction d'un framework monorepo React/Next.js comme fondation technique de toutes les applications web internes, bibliothèque de composants partagée, autorisation RBAC. Boschung (2024) : Développement frontend sur Boschung Web. Extia (2023–2024) : Interfaces React/PWA, APIs REST, infrastructure VPS, CI/CD avec GitHub Actions.",
+    "itafTitle": "Développeur Full-Stack",
+    "itafCompany": "ITAF.TECH · Bordeaux, France",
+    "itafPeriod": "2022 — 2023",
+    "itafDescription": "Développeur full-stack sur un ERP santé servant plus de 70 000 patients. Développement de fonctionnalités et intégration à travers l'application, architecture multi-tenant pour supporter les déploiements internationaux, implémentation i18n et refactoring architectural avec automatisation des tests.",
+    "addeoTitle": "Développeur Full-Stack",
+    "addeoCompany": "Addeo · Bordeaux, France",
+    "addeoPeriod": "2019 — 2021",
+    "addeoDescription": "Développeur full-stack dans une agence e-learning, travaillant sur une plateforme SaaS de développement de carrière. Réécriture du code legacy avec des principes d'architecture propre, optimisation des performances et tests unitaires. Collaboration étroite avec l'équipe design sur la faisabilité des fonctionnalités."
+  },
+  "Footer": {
+    "copyright": "© 2026 Simon Paillassa."
+  },
+  "Contact": {
+    "heading": "Me contacter",
+    "description": "Actuellement basé à Lisbonne, Portugal. Disponible pour des opportunités freelance sélectionnées et des demandes de collaboration architecturale."
+  },
+  "ContactForm": {
+    "name": "Nom",
+    "namePlaceholder": "Votre nom complet",
+    "email": "Adresse e-mail",
+    "emailPlaceholder": "hello@example.com",
+    "subject": "Objet",
+    "subjectPlaceholder": "Demande de projet / Question générale",
+    "message": "Message",
+    "messagePlaceholder": "Décrivez brièvement votre vision...",
+    "send": "Envoyer le message",
+    "sending": "Envoi en cours...",
+    "success": "Message envoyé avec succès ! Je vous recontacterai bientôt.",
+    "error": "Échec de l'envoi du message. Veuillez réessayer.",
+    "validationNameMin": "Le nom doit contenir au moins 2 caractères.",
+    "validationEmailInvalid": "Veuillez entrer une adresse e-mail valide.",
+    "validationSubjectMin": "L'objet doit contenir au moins 2 caractères.",
+    "validationMessageMin": "Le message doit contenir au moins 10 caractères."
+  },
+  "ContactInfo": {
+    "directContact": "Contact direct",
+    "location": "Localisation",
+    "city": "Lisbonne",
+    "country": "Portugal, UE",
+    "timezone": "Disponibilité horaire",
+    "timezoneValue": "Disponible CET / ET / BRT",
+    "timezoneDetail": "(Europe · US · Canada · Brésil)"
+  },
+  "Sarba": {
+    "back": "Retour aux projets",
+    "title": "Sarba",
+    "description": "Cette application simplifie le suivi des dépenses et la gestion des rapports pour les entreprises. Les employés peuvent enregistrer des dépenses en plusieurs devises, signer des rapports mensuels et recevoir des notifications pour les approbations. Les administrateurs peuvent générer des rapports, demander des signatures et télécharger les documents finalisés, le tout dans un flux de travail numérique fluide.",
+    "userFeatures": "Fonctionnalités utilisateur",
+    "adminFeatures": "Fonctionnalités administrateur",
+    "userFeature1": "Créer des dépenses, joindre des reçus et gérer les transactions passées",
+    "userFeature2": "Recevoir des notifications pour les signatures en attente",
+    "userFeature3": "Signer les rapports mensuels et consulter les précédents",
+    "adminFeature1": "Générer des rapports mensuels pour tous les employés",
+    "adminFeature2": "Demander et suivre les statuts de signature",
+    "adminFeature3": "Télécharger les rapports signés",
+    "adminFeature4": "Support multi-devises pour les dépenses",
+    "mockup1Alt": "Maquette de l'application Sarba montrant l'interface de gestion des dépenses",
+    "mockup2Alt": "Maquette de l'application Sarba montrant la gestion des rapports"
+  },
+  "Metadata": {
+    "homeTitle": "Simon Paillassa — Développeur Full-Stack",
+    "homeDescription": "Portfolio de Simon Paillassa, développeur full-stack avec 7 ans d'expérience dans la création de produits numériques performants.",
+    "contactTitle": "Contact — Simon Paillassa",
+    "contactDescription": "Contactez Simon Paillassa. Disponible pour des opportunités freelance sélectionnées et des demandes de collaboration.",
+    "sarbaTitle": "Sarba — Application de gestion des frais",
+    "sarbaDescription": "Application de gestion des notes de frais conçue pour aider les employés et l'administration à gérer les dépenses engagées pendant les jours de travail."
+  }
+}

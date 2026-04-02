@@ -1,0 +1,109 @@
+{
+  "Nav": {
+    "projects": "Projects",
+    "about": "About",
+    "experience": "Experience",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "Hero": {
+    "available": "Available for new opportunities",
+    "title": "Full-stack Developer",
+    "subtitle": "7 years experience building intuitive applications"
+  },
+  "About": {
+    "heading": "About Me",
+    "bio": "Full-stack developer with 7 years of experience building web and mobile applications. I work mainly with React, Next.js, NestJS and TypeScript. I'm comfortable taking a project from architecture to deployment. Outside of client work, I co-founded Ossau, a mobile app for the hiking community, built from scratch and now used by 2,000+ people."
+  },
+  "Projects": {
+    "heading": "Selected Works",
+    "ossauTitle": "Ossau App",
+    "ossauDescription": "Shared outdoor experience application making mountain activities more accessible in the Pyrenees.",
+    "ossauCta": "Visit Website",
+    "bvisionTitle": "bVision",
+    "bvisionDescription": "High-performance monitoring and management platform for road and airport maintenance, providing real-time data visualization and analytics to enhance operational efficiency.",
+    "bvisionCta": "Visit Website",
+    "sarbaTitle": "Sarba",
+    "sarbaDescription": "Expense Management Application designed to help employees and administration to manage expenses incurred during working days.",
+    "sarbaCta": "View Project"
+  },
+  "Experience": {
+    "heading": "Professional Journey",
+    "downloadResume": "Download Resume",
+    "ossauTitle": "Co-founder & Lead Developer",
+    "ossauCompany": "Ossau App",
+    "ossauPeriod": "2025 — Present",
+    "ossauDescription": "Co-founded Ossau, a mobile app for the Pyrénées hiking community with 2,000+ active users. Sole developer working alongside a product co-founder and a UX designer. Built the full stack from scratch: NestJS backend on VPS, PostgreSQL via Neon, Expo/React Native frontend. Core features include trail maps, group social features, real-time notifications, and deep linking for iOS & Android.",
+    "freelanceTitle": "Freelance Full-Stack Developer",
+    "freelanceCompany": "Independent · Remote",
+    "freelancePeriod": "2023 — Present",
+    "freelanceDescription": "Working independently with European clients on varied projects from internal tooling to enterprise applications. STEF (2024–present): Built a React/Next.js monorepo framework as the technical foundation for all internal web apps, shared component library, RBAC authorization. Boschung (2024): Frontend development on Boschung Web. Extia (2023–2024): React/PWA interfaces, REST APIs, VPS infrastructure, CI/CD with GitHub Actions.",
+    "itafTitle": "Full-Stack Developer",
+    "itafCompany": "ITAF.TECH · Bordeaux, France",
+    "itafPeriod": "2022 — 2023",
+    "itafDescription": "Full-stack developer on a healthcare ERP serving 70,000+ patients. Feature development and integration across the application, multi-tenant architecture to support multiple international client deployments, i18n implementation, and architectural refactoring with test automation.",
+    "addeoTitle": "Full-Stack Developer",
+    "addeoCompany": "Addeo · Bordeaux, France",
+    "addeoPeriod": "2019 — 2021",
+    "addeoDescription": "Full-stack developer in an e-learning agency, working on a SaaS career development platform. Rewrote the legacy codebase with clean architecture principles, performance optimization and unit testing. Close collaboration with the design team on feature feasibility."
+  },
+  "Footer": {
+    "copyright": "© 2026 Simon Paillassa."
+  },
+  "Contact": {
+    "heading": "Get in Touch",
+    "description": "Currently based in Lisbon, Portugal. Available for selected freelance opportunities and collaborative architectural inquiries."
+  },
+  "ContactForm": {
+    "name": "Name",
+    "namePlaceholder": "Your Full Name",
+    "email": "Email Address",
+    "emailPlaceholder": "hello@example.com",
+    "subject": "Subject",
+    "subjectPlaceholder": "Project Inquiry / General Question",
+    "message": "Message",
+    "messagePlaceholder": "Briefly describe your vision...",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully! I'll get back to you soon.",
+    "error": "Failed to send message. Please try again.",
+    "validationNameMin": "Name must be at least 2 characters.",
+    "validationEmailInvalid": "Please enter a valid email address.",
+    "validationSubjectMin": "Subject must be at least 2 characters.",
+    "validationMessageMin": "Message must be at least 10 characters."
+  },
+  "ContactInfo": {
+    "directContact": "Direct Contact",
+    "location": "Location",
+    "city": "Lisbon",
+    "country": "Portugal, EU",
+    "timezone": "Time Zone Availability",
+    "timezoneValue": "Available CET / ET / BRT",
+    "timezoneDetail": "(Europe · US · Canada · Brazil)"
+  },
+  "Sarba": {
+    "back": "Back to projects",
+    "title": "Sarba",
+    "description": "This application simplifies expense tracking and report management for companies. Employees can log expenses in multiple currencies, sign monthly reports, and receive notifications for approvals. Administrators can generate reports, request signatures, and download finalized documents, all in a seamless, digital workflow.",
+    "userFeatures": "User Features",
+    "adminFeatures": "Admin Features",
+    "userFeature1": "Create expenses, attach receipts, and manage past transactions",
+    "userFeature2": "Receive notifications for pending signatures",
+    "userFeature3": "Sign monthly reports and review previous ones",
+    "adminFeature1": "Generate monthly reports for all employees",
+    "adminFeature2": "Request and track signature statuses",
+    "adminFeature3": "Download signed reports",
+    "adminFeature4": "Multi-currency expense support",
+    "mockup1Alt": "Sarba application mockup showing expense management interface",
+    "mockup2Alt": "Sarba application mockup showing report management"
+  },
+  "Metadata": {
+    "homeTitle": "Simon Paillassa — Full-Stack Developer",
+    "homeDescription": "Portfolio of Simon Paillassa, a full-stack developer with 7 years of experience building high-performance digital products.",
+    "contactTitle": "Contact — Simon Paillassa",
+    "contactDescription": "Get in touch with Simon Paillassa. Available for selected freelance opportunities and collaborative inquiries.",
+    "sarbaTitle": "Sarba — Expense Management App",
+    "sarbaDescription": "Expense Management Application designed to help employees and administration to manage expenses incurred during working days."
+  }
+}

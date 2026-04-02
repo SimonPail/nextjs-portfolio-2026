@@ -1,36 +1,45 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useTransition } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-
-const navLinks = [
-  { label: "Projects", href: "/#projects" },
-  { label: "About", href: "/#about" },
-  { label: "Experience", href: "/#experience" },
-];
+import { usePathname, useRouter } from "next/navigation";
+import { useLocale, useTranslations } from "next-intl";
+import { setLocale } from "../actions/locale";
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
+  const locale = useLocale();
+  const t = useTranslations("Nav");
+  const [, startTransition] = useTransition();
 
-  // Close mobile menu on route change
+  const navLinks = [
+    { label: t("projects"), href: "/#projects" },
+    { label: t("about"), href: "/#about" },
+    { label: t("experience"), href: "/#experience" },
+  ];
+
   useEffect(() => {
     setMenuOpen(false);
   }, [pathname]);
 
+  function handleLocaleChange(newLocale: string) {
+    startTransition(async () => {
+      await setLocale(newLocale);
+      router.refresh();
+    });
+  }
+
   return (
     <nav className="fixed top-0 w-full z-50 bg-white/60 backdrop-blur-xl">
       <div className="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
-        {/* Logo */}
         <Link
           href="/"
           className="text-xl font-black font-headline text-stone-800"
         >
           Portfolio
         </Link>
-
-        {/* Desktop nav links — centered */}
         <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
           {navLinks.map((link) => (
             <Link
@@ -46,37 +55,44 @@ export default function Nav() {
             </Link>
           ))}
         </div>
-
-        {/* Right cluster */}
         <div className="flex items-center gap-4">
-          {/* Language switcher — desktop only */}
           <div className="hidden lg:flex items-center gap-4 border-r border-stone-200 pr-6 mr-2">
             <span className="material-symbols-outlined text-stone-400 text-sm">
               language
             </span>
             <div className="flex gap-3">
-              <button className="font-bold uppercase tracking-widest text-[10px] text-stone-800">
+              <button
+                onClick={() => handleLocaleChange("en")}
+                className={`font-bold uppercase tracking-widest text-[10px] transition-colors ${
+                  locale === "en"
+                    ? "text-stone-800"
+                    : "text-stone-400 hover:text-stone-800"
+                }`}
+              >
                 EN
               </button>
-              <button className="font-bold uppercase tracking-widest text-[10px] text-stone-400 hover:text-stone-800 transition-colors">
+              <button
+                onClick={() => handleLocaleChange("fr")}
+                className={`font-bold uppercase tracking-widest text-[10px] transition-colors ${
+                  locale === "fr"
+                    ? "text-stone-800"
+                    : "text-stone-400 hover:text-stone-800"
+                }`}
+              >
                 FR
               </button>
             </div>
           </div>
-
-          {/* CTA */}
           <Link
             href="/contact"
             className="hidden md:inline-flex font-bold uppercase tracking-widest text-xs px-4 py-2 bg-stone-800 text-stone-50 rounded-lg hover:opacity-80 transition-opacity"
           >
-            Contact
+            {t("contact")}
           </Link>
-
-          {/* Hamburger — mobile only */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden p-2 text-stone-700"
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            aria-label={menuOpen ? t("closeMenu") : t("openMenu")}
           >
             <span className="material-symbols-outlined text-2xl">
               {menuOpen ? "close" : "menu"}
@@ -84,8 +100,6 @@ export default function Nav() {
           </button>
         </div>
       </div>
-
-      {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden bg-white/95 backdrop-blur-xl border-t border-stone-100">
           <div className="max-w-7xl mx-auto px-8 py-6 flex flex-col gap-4">
@@ -103,14 +117,21 @@ export default function Nav() {
               </Link>
             ))}
             <div className="flex gap-4 pt-4 border-t border-stone-100">
-              <button className="font-bold uppercase tracking-widest text-[10px] text-stone-800">
+              <button
+                onClick={() => handleLocaleChange("en")}
+                className={`font-bold uppercase tracking-widest text-[10px] ${
+                  locale === "en" ? "text-stone-800" : "text-stone-400"
+                }`}
+              >
                 EN
               </button>
-              <button className="font-bold uppercase tracking-widest text-[10px] text-stone-400">
+              <button
+                onClick={() => handleLocaleChange("fr")}
+                className={`font-bold uppercase tracking-widest text-[10px] ${
+                  locale === "fr" ? "text-stone-800" : "text-stone-400"
+                }`}
+              >
                 FR
-              </button>
-              <button className="font-bold uppercase tracking-widest text-[10px] text-stone-400">
-                PT
               </button>
             </div>
           </div>

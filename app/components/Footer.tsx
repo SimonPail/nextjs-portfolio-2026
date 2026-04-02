@@ -1,6 +1,9 @@
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 
-export default function Footer() {
+export default async function Footer() {
+  const t = await getTranslations("Footer");
+
   return (
     <footer className="bg-stone-100 w-full py-12">
       <div className="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-8 gap-6">
@@ -32,7 +35,7 @@ export default function Footer() {
           </Link>
         </div>
         <div className="font-body text-sm font-medium text-stone-600 opacity-80">
-          &copy; 2026 Simon Paillassa.
+          {t("copyright")}
         </div>
       </div>
     </footer>
