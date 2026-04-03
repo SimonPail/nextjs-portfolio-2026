@@ -24,7 +24,10 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   const card = (
     <div className="group bg-surface-container-lowest rounded-xl overflow-hidden flex flex-col transition-transform hover:-translate-y-2 duration-500">
-      <div className="aspect-video overflow-hidden" style={imageBg ? { backgroundColor: imageBg } : undefined}>
+      <div
+        className="aspect-video overflow-hidden"
+        style={imageBg ? { backgroundColor: imageBg } : undefined}
+      >
         <Image
           src={imageUrl}
           alt={imageAlt}
@@ -38,12 +41,10 @@ export default function ProjectCard({
         <p className="text-on-surface-variant text-sm mb-6 line-clamp-3 font-body">
           {description}
         </p>
-        <div className="flex items-center text-xs font-bold uppercase tracking-widest text-secondary group-hover:gap-4 transition-all font-headline">
+        <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-secondary-container text-on-secondary-container rounded-lg font-bold text-sm uppercase tracking-widest hover:brightness-95 transition-all font-headline">
+          <span className="material-symbols-outlined text-lg">arrow_forward</span>
           {ctaLabel}
-          <span className="material-symbols-outlined text-sm ml-2">
-            arrow_forward
-          </span>
-        </div>
+        </span>
       </div>
     </div>
   );
