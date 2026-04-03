@@ -41,8 +41,10 @@ export default function ProjectCard({
         <p className="text-on-surface-variant text-sm mb-6 line-clamp-3 font-body">
           {description}
         </p>
-        <span className="inline-flex items-center gap-2 px-3 py-1.5 bg-secondary-container text-on-secondary-container rounded-lg font-bold text-sm uppercase tracking-widest hover:brightness-95 transition-all font-headline">
-          <span className="material-symbols-outlined text-lg">arrow_forward</span>
+        <span className="inline-flex items-center gap-2 px-3 py-1 bg-secondary-container text-on-secondary-container rounded-lg font-bold text-sm uppercase tracking-widest hover:brightness-95 transition-all font-headline">
+          <span className="material-symbols-outlined text-sm">
+            arrow_forward
+          </span>
           {ctaLabel}
         </span>
       </div>
