@@ -116,6 +116,18 @@ export default function Nav() {
                 {link.label}
               </Link>
             ))}
+
+            <Link
+              href="/contact"
+              className={`font-headline font-bold uppercase tracking-widest text-sm py-2 transition-colors ${
+                pathname === "/contact"
+                  ? "text-secondary"
+                  : "text-stone-600 hover:text-stone-800"
+              }`}
+            >
+              {t("contact")}
+            </Link>
+
             <div className="flex gap-4 pt-4 border-t border-stone-100">
               <button
                 onClick={() => handleLocaleChange("en")}
