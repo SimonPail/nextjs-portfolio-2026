@@ -21,6 +21,7 @@ const inter = Inter({
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("Metadata");
   return {
+    metadataBase: new URL("https://portfolio.simbl.dev"),
     title: t("homeTitle"),
     description: t("homeDescription"),
     openGraph: {
