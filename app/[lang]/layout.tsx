@@ -23,6 +23,18 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t("homeTitle"),
     description: t("homeDescription"),
+    openGraph: {
+      title: t("homeTitle"),
+      description: t("homeDescription"),
+      url: "https://portfolio.simbl.dev",
+      siteName: "Simon Paillassa",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("homeTitle"),
+      description: t("homeDescription"),
+    },
   };
 }
 
